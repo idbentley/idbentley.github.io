@@ -23,9 +23,12 @@ url: "https://idbentley.com" # the base hostname & protocol for your site, e.g. 
 markdown: kramdown
 plugins:
   - jekyll-feed
-
+  - octopress-paginate
+  # - jekyll-paginate
 paginate: 5
-
+paginate_path: "/weekly/page:num/"
+collections:
+  - topics
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

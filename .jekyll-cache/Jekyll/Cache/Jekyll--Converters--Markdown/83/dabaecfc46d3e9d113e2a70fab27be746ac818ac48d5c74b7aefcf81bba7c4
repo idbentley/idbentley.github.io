@@ -1,0 +1,6 @@
+I"ˆ<video controls="" width="80%" style="margin: auto;">
+  <source src="https://weekly.us-east-1.linodeobjects.com/NPlusOne.mp4" />
+</video>
+
+<p>In this video we discuss the simplest implementation of a Hash Map.   We discuss the remarkable big-oh properties of this incredibly useful data structure, as well as considering the nuances of average, worst and amortized cost runtime analysis.</p>
+:ET

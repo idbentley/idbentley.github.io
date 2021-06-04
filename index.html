@@ -3,36 +3,21 @@ layout: default
 title: Home
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
+<h1>Welcome!</h1>
+<p>
+Hello There!  My name is Ian, and I'm an experienced Software Developer who has turned their full attention
+to the question of training the next generation of developers.
+<p>
 
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x7zib0i" width="100%" height="100%" allowfullscreen > </iframe> </div>
+
+</p>
+If you're a student, you've come to the right spot!  Tune into Ian's <a href="/weekly">weekly lectures</a> for
+data structures and algorithms, tips and tricks as well as deep dives into topics related to web application
+development.
+</p>
+
+<p>
+After graduating with a M.Sc. in Computer Science, I have worked as a professional Sofware Developer for the last
+ten years.  Though I loved my work as a developer, I realized that my true calling was in educating others. </p>

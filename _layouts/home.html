@@ -2,31 +2,19 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path }}" class="previous">Newer</a>
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-</div>
+<h1>Welcome</h1>
+<p>
+Welcome to Ian Bentley's personal website!  Ian is a Software Engineering educator who is currently working
+individually with students.
+</p>
+<p>
+Tune into Ian's <a href="/weekly">weekly lectures</a> for data structures and algorithms, tips and tricks
+as well as deep dives into topics related to web application development.
+</p>
+<h2>Upcoming</h2>
+<p>
+  Ian is currently developing an online course for intermediate web developers with an interest in security.
+  In this course we will cover, in depth, the principal tenants of web application security.  You will learn
+  best practices to avoid being targetted by hackers, how to find vulnerabilities in your own site, and how
+  to remedy vulnerabilities once they've been found.
+</p>

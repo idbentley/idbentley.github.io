@@ -175,6 +175,34 @@ a.sidebar-nav-item:focus {
  * within blog posts. To use, add the class of your choosing to the `body`.
  */
 
+/* Dark Mode */
+.theme-dark-mode .sidebar{
+  background-color: #13141a;
+}
+.theme-dark-mode {
+  background-color: #27272d;
+  color: #c8c7c7;
+}
+.theme-dark-mode .content h1,
+.theme-dark-mode .content h1 a,
+.theme-dark-mode .content h2,
+.theme-dark-mode .content h2 a,
+.theme-dark-mode .content h3,
+.theme-dark-mode .content h3 a,
+.theme-dark-mode .content h4,
+.theme-dark-mode .content h4 a,
+.theme-dark-mode .content h5,
+.theme-dark-mode .content h5 a,
+.theme-dark-mode .content h6,
+.theme-dark-mode .content h6 a
+ {
+  color: #e6e6e6;
+}
+.theme-dark-mode .content a,
+.theme-dark-mode .related-posts li a:hover {
+  color: #ac4142;
+}
+
 /* Base16 (http://chriskempson.github.io/base16/#default) */
 
 /* Red */
