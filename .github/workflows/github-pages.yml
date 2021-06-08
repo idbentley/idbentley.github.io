@@ -1,0 +1,15 @@
+name: Build for Github Pages
+
+on:
+  push:
+    branches:
+      -main
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: halaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
