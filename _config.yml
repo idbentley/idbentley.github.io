@@ -22,7 +22,7 @@ url: "https://idbentley.com" # the base hostname & protocol for your site, e.g. 
 # Build settings
 markdown: kramdown
 plugins:
-  - jekyll-feed
+  # - jekyll-feed
   # - octopress-paginate
   - jekyll-paginate
   - jekyll-paginate-multiple
