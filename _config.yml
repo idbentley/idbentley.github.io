@@ -33,6 +33,9 @@ paginate_multiple:
   - paginate: 5
     paginate_path: "/topics/page:num/"
     sub_dir: "topics"
+  - paginate: 5
+    paginate_path: "/blog/page:num/"
+    sub_dir: "blog"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
