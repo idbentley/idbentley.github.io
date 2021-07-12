@@ -11,15 +11,15 @@ categories: opinion github ai best-practices pair-programming copilot pairing
 
 In the weeks that have passed since GitHub opened their [Copilot](https://copilot.github.com/) project to developer preview, I've been trying to determine if my negative feelings towards the project are justified, or if I am just a Dinosaur who is afraid of the future. After some additional reading, and looking at many samples from the project, I've finally decided that I'm not wrong, and that it was about time to put together my thoughts.
 
-There have been several embarrassing, but unsurprising revelations that have popped up over the past weeks, and it has become almost too easy to criticize the project.  People have brought up incredibly legitimate concerns about the project's ability to plagiarize code, ignore important licensing information, and reduce the security of our software projects.  While I agree with most of these concerns, I keep coming back to a concern of my own.
+There have been several embarrassing, but unsurprising revelations that have popped up over the past weeks, and it has become almost too easy to criticize the project.  People have brought up incredibly legitimate concerns about the project's ability to plagiarize code, ignore important licensing information, and reduce the security of our software projects.
 
-Copilot isn't a pair programmer, and if it is widely used it _will reduce the quality of our code bases_.
+While I agree with most of these concerns, I keep coming back to a concern of my own.  Github claims that Copilot is "Your AI pair programmer" - but example after example show that _Copilot should be treated as a pairing partner_.
+
+In this post, I will look to real world examples of Copilot being a bad pair programmer, and discuss the inherent limitations in this system.  I believe that if Copilot is treated as a pairing partner, it _will reduce the quality of our code bases_.
 
 ## Part 1: Copilot Isn't a Pair Programmer
 
-Github's claims that Copilot is "Your AI pair programmer", which implies a lot about what we should expect the software to do.  There is no definition of Pair Programming that's going to satisfy everyone, people pair for a lot of reasons: education, reduced bugs, developer satisfaction (through team building, socialization), etc.  With that being said, I think we safely assume that Copilot isn't intended as a social tool, and it wouldn't really be fair to judge it in that way.
-
-I, therefore, will evaluate Copilot as a Pair Programmer based on three questions: Does Copilot reduce software bugs?  Does Copilot encourage best-practices?  Does Copilot spot your syntax mistakes before you compile your code?
+Github marketing material state emphatically that Copilot is "Your AI pair programmer", which implies a lot about what we should expect the software to do.  There is no definition of Pair Programming that's going to satisfy everyone, but I believe that the fundamental reasons that we pair are well summarized by a series of questions, that can be asked in retrospect.  Good pairing should lead us to answer yes to most, if not all of these questions.  Did pair programming reduce bugs in my software?  Did pair programming encourage best-practices?  Did pair programming identify syntax mistakes before my compiler?
 
 Let's look at a few example cases, in order to determine how Copilot ranks as a pairing partner.
 
@@ -75,11 +75,16 @@ I won't speculate about the veracity of Github's denial here, because it's impos
 
    No.  Once again, Copilot took the driver's seat.  You don't have to write any code at all, you don't have to think about what a good quality secret key is, you don't have to figure out how to import from a configuration.
 
-Copilot suggests incorrect code, reinforces bad practices, and misses opportunities to correct dangerous behaviour.  Copilot fails to act as a quality programming pair - and in both examples reduces the quality of the code our code base.
+Copilot suggests incorrect code, reinforces bad practices, and misses opportunities to correct dangerous behaviour.  Copilot fails to act as a quality programming pair - and in both examples shown here, Copilot's suggested code actively reduces the quality of the code our code base.
 
-## Part 2: Copilot is trained on Legacy Open Source software
+Obviously, two examples is not sufficient to evaluate Copilot as a pairing partner, and I began to wonder if I am being too pedantic.  Maybe it doesn't matter that Copilot isn't pair programming, and we can just chalk this up to an overzealous marketing team.  If the code that Copilot writes is saving people time, maybe it doesn't matter if it's a good pairing partner.
 
-One of the most profoundly misunderstood aspects of AI systems is that you can usually define an upper bound on the quality of the trained system by evaluating the quality of it's training data.  An AI system cannot outperform it's training data, and for a system like Copilot (a generative model), this means that it cannot lead us to write better code than whatever it is trained upon.  This is really important to note, with Copilot, because [we know what it has used as training data](https://twitter.com/NoraDotCodes/status/1412741339771461635).
+If Github can improve the training, and address these problematic suggestions, would Copilot be capable of writing modern code that follows our best practices?
+
+
+## Part 2: Copilot is trained on Legacy code of questionable quality
+
+One of the most profoundly misunderstood aspects of AI systems is that you can usually define an upper bound on the quality of the trained system by evaluating the quality of it's training data.  An AI system cannot outperform it's training data, and for a system like Copilot (a generative model), this means that it cannot write better code than whatever it is trained upon.  This is really important to note, with Copilot, because [we know what it has used as training data](https://twitter.com/NoraDotCodes/status/1412741339771461635).
 
 So, how good is the open source code that Copilot is trained on?
 
@@ -117,4 +122,6 @@ I am very concerned about the host of potentially problematic issues that have c
 
 I also believe that this problem is profoundly unfixable.  Copilot doesn't learn anything about your code, or the environment it is programming in, it isn't that kind of an AI.  Instead, it is a generative model, it looks at your code and suggests statistically similar code derived from it's training data.  Without an understanding of the context of your development, Copilot cannot be a programming pair.  Because it is training off of arbitrary Open Source data, there is a clear upper limit to the quality of code that Copilot can be expected to suggest.
 
-For these reasons, and more, we have to draw the conclusion that Copilot is most likely to reduce your code quality, and teach you bad practices. In my view, and especially for new developers, Copilot should be avoided at your own peril.
+For these reasons, and more, we have to draw the conclusion that Copilot is most likely to reduce your code quality, and teach you bad practices. In my view, and especially for new developers, Copilot should be avoided as a pairing partner.
+
+[Here](https://jakearchibald.com/2021/encoding-data-for-post-requests/) [are](https://blog.scottlogic.com/2021/07/03/github-copilot-first-thoughts.html) [some](https://www.realpythonproject.com/some-experiments-with-github-copilot/) [examples](https://twitter.com/ItalyPaleAle/status/1409890404615409671) of both positive and negative takes on Copilot.
