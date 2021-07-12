@@ -428,3 +428,11 @@ a.pagination-item:hover {
     border-bottom-right-radius: 4px;
   }
 }
+
+
+p.warning {
+  width:  100%;
+  background-color: #ffe08a;
+  color: #946c00;
+  padding:  10px;
+}
