@@ -2,7 +2,7 @@
 layout: post
 title: "GitHub Copilot: Reducing Code Quality"
 date: 2021-07-09
-published: true
+published: false
 future: true
 categories: opinion github ai best-practices pair-programming copilot pairing
 ---
