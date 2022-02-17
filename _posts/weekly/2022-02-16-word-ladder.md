@@ -11,4 +11,4 @@ categories: live leetcode breadthfirstsearch breadth first search graph traversa
 
 In this video we will solve LeetCode 127.  We start by building a graph, and finish by doing breadth first search to find the shortest path between the startWord and the endWord.
 
-Find the code here: [https://gitlab.com/idbentley/commonsense-lectures/-/tree/main/leetcode-127](Leetcode 127)
+Find the code here: [Leetcode 127](https://gitlab.com/idbentley/commonsense-lectures/-/tree/main/leetcode-127)
